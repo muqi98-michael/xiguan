@@ -16,10 +16,10 @@ export default function HabitCard({ habit, onEdit, onDelete }: HabitCardProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [animating, setAnimating] = useState(false);
   const toggleCheckIn = useCheckInStore((s) => s.toggleCheckIn);
-  const getCheckIn = useCheckInStore((s) => s.getCheckIn);
+  const checkIns = useCheckInStore((s) => s.checkIns);
 
   const todayStr = formatDate(new Date());
-  const isChecked = !!getCheckIn(habit.id, todayStr);
+  const isChecked = checkIns.has(`${habit.id}-${todayStr}`);
   const { current } = useStreak(habit);
 
   const handleToggle = async () => {
