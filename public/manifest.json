@@ -1,0 +1,16 @@
+{
+  "name": "习惯追踪器",
+  "short_name": "习惯追踪器",
+  "description": "让每个人都能以自己的节奏变好",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
